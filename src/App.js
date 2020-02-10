@@ -1,24 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Layout/Header';
+import SideBar from './components/Layout/SideBar';
+import MainContent from './components/Layout/MainContent';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+      <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+      {/* <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button> */}
+        <SideBar />
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+          <Header />
+          <MainContent />
+        </div>
+
+      </div>
     </div>
   );
 }
